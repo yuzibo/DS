@@ -27,11 +27,11 @@ void merge(int a[],int p,int q, int r){
 		else
 			bp[k++] = a[j++];
 	}
-	if(i == q + 1 ){
+	if(i == q + 1 ){     // 针对两种情况分析，前一个子数组比较完成
 		for (;j <= r; j++)
 			bp[k++] = a[j];
 	}
-	else{
+	else{		//后一个子数组比较完成
 		for(; i <= j; i++)
 		bp[k++] = a[i];
 	}
