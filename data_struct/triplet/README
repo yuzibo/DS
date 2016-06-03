@@ -1,0 +1,5 @@
+1. fp.c 是函数指针代替c++的引用参数
+2. haffmancode.c 是写成haffmancode的c代码
+3. time_effict_1.c 计算累加和的方法1
+
+
