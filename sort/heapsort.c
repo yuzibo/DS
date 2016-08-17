@@ -36,6 +36,7 @@ void heap_sort(int a[],int n){
 	for(i = n / 2 - 1;i >= 0; i--){
 		maxheap_down(a,i,n-1);//看你从主函数调用时传递的参数
 	}
+	/*经过初次的堆排序，a[0]此时存储着最大的元素*/
 	printf("MAX is %d\n",a[0]);
 	/*从最后一个元素开始，不断缩小范围直至最后一个元素*/
 	for(i = n - 1;i >= 0; i--){
