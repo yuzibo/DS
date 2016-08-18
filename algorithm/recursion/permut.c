@@ -29,8 +29,10 @@ void permute(char *a, int l, int r)
 	{
 		for (i = l; i <= r; i++)
 		{
+			/* 测试用的
 			printf("此时的l等于%d， i为%d：\n", l, i);
 			printf("此时的a[%d]=%c,a[%d]=%c\n",l, a[l], i, a[i]);
+			*/
 			swap((a+l), (a+i));
 			permute(a, l+1, r);
 			swap((a+l), (a+i)); /*回溯*/
