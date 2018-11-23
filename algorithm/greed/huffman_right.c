@@ -17,6 +17,10 @@ struct min_heap{
 	unsigned capacity; /* capacity of min heap */
 	struct min_heap_node **array; /*minheap node pointers */
 };
+
+
+int is_leaf(struct min_heap_node*);
+
 /* 分配一个新的小堆节点，字符参数为's',和频率的条件下*/
 struct min_heap_node* new_node(char data, unsigned freq)
 {
@@ -138,10 +142,10 @@ struct min_heap_node* build_huffman_tree(char data[], int freq[], int size)
 		top->left = left;
 		top->right = right;
 		/*左节点和右节点结合产生的内部节点*/
-		insert_min_heap(minheap, top);             
+		insert_min_heap(minheap, top);
 	}
 	return extraact_min(minheap);
-} 
+}
 /******
 * 从这里开始，最优树已经完成了，接下来进行
 * 编码的工作
@@ -189,8 +193,8 @@ void huffman_code(char data[], int freq[], int size)
 }
 int main()
 {
-	char arr[] = { 'a', 'b', 'c', 'd','e','f'};
-	int freq[] = {5,9,12,13,16,45};
+	char arr[] = { 'a', 'b', 'c', 'd','e','f','g','h'};
+	int freq[] = {2, 3, 6,7,10,19,21,32};
 	int size = sizeof(arr)/sizeof(arr[0]);
 	huffman_code(arr, freq, size);
 	return 0;
