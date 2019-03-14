@@ -1,0 +1,5 @@
+leetcode-main.c 是测试程序的主函数，执行的时候，把构造的二叉树root传递过来就可以
+目前，需要你
+gcc -g leetcode-main.c leetcode-problem.c -o main
+
+去执行。当然，leetcode程序中也需要结构体，可以用个头文件解决这个问题。
